@@ -1,0 +1,13 @@
+.nav-toggle-btn{
+    font-size: 40px;
+  }
+  .nav-toggle-btn.active .open,
+  .nav-toggle-btn .close{
+    display: none;
+  } 
+  
+  .nav-toggle-btn .open,
+  .nav-toggle-btn.active .close{
+    display: block;
+  }
+

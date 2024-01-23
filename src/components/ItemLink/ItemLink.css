@@ -1,0 +1,8 @@
+.navbar-link{
+    color: var(--eerie-black);
+    font-family: var(--ff-league-spartan);
+    font-size: var(--fs-4);
+    line-height: 1.2;
+    padding-block: 8px;
+    transition: var(--transition-1);
+   }
