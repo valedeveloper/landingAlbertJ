@@ -11,6 +11,9 @@
   background-color: white;
  }
 
+
+ 
+
  .header.active{
     filter: drop-shadow(var(--shadow-2));
  }
@@ -63,4 +66,5 @@
   max-height: 320px;
   visibility: visible;
   transition-duration: 0.5s ;
+  color: var(--white-1);
  }

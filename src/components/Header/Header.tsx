@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import ItemLink from "../ItemLink/ItemLink.tsx";
 import Button from "../Button/Button.tsx";
 import { listMenu } from "./listMenu";
+import { buildWhatsAppLink } from "../../utilities/getLinkWhatsApp.js";
 import "./Header.css";
-
 function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false);
+
+  // window.onscroll = () => {
+  //   setIsScroll(window.pageYOffset > 0);
+  // };
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,13 +29,16 @@ function Header() {
   };
 
   return (
-    <header className="header">
+    <header className={"header "}>
       <div className="container">
         <a href="#" className="logo">
-          <img src="/assets/images/LogoBlancoAlbertJ-sinfondo.png"  alt="Logo Albert J"/>
+          <img
+            src={"/assets/images/LogoBlancoAlbertJ-sinfondo.png"}
+            alt="Logo Albert J"
+          />
         </a>
 
-        <nav className={"navbar container " + (isMenuActive && "active")}>
+        <nav className={"navbar container " + (isMenuActive && "active ")}>
           <ul className="navbar-list">
             {listMenu.map((item) => (
               <ItemLink
@@ -42,10 +49,22 @@ function Header() {
                 className={item.className}
               />
             ))}
+            <li>
+              <a
+                href={buildWhatsAppLink()}
+                className={"btn btn-primary "}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Escríbenos
+              </a>
+            </li>
           </ul>
-          
         </nav>
-        <Button onToggleMenu={onToggleMenu} isMenuActive={isMenuActive} />
+        <Button
+          onToggleMenu={onToggleMenu}
+          isMenuActive={isMenuActive}
+        />
       </div>
     </header>
   );

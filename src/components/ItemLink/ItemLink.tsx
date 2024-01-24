@@ -6,15 +6,25 @@ type Props = {
   title: string;
   className?: string;
   isWhatsApp?: boolean;
+  isScroll?: boolean;
 };
-function ItemMenu({ href, title, className, isWhatsApp=false }: Props) {
+function ItemMenu({
+  href,
+  title,
+  className,
+  isWhatsApp = false,
+}: Props) {
   const linkProps = isWhatsApp
     ? { target: "_blank", rel: "noopener noreferrer" }
     : {};
 
   return (
     <li>
-      <a href={href} className={className ?? "navbar-link"} {...linkProps}>
+      <a
+        href={href}
+        className={className ?? "navbar-link " }
+        {...linkProps}
+      >
         {title}
       </a>
     </li>

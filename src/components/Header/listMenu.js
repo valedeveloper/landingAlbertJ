@@ -18,10 +18,4 @@ export const listMenu = [
     href: "#contactUs",
     title: "Contactos",
   },
-  {
-    href: buildWhatsAppLink(),
-    title: "Escríbeme",
-    className: "btn btn-primary",
-    isWhatsApp: true,
-  },
 ];
