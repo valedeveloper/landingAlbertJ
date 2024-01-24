@@ -1,28 +1,27 @@
+import { buildWhatsAppLink } from "../../utilities/getLinkWhatsApp";
 export const listMenu = [
   {
     href: "#home",
-    title: "Home",
+    title: "Inicio",
   },
   {
     href: "#services",
-    title: "Services",
+    title: "Servicios",
   },
-  {
-    href: "#projectUs",
-    title: "ProjectUs",
-  },
+
   {
     href: "#about",
-    title: "About",
+    title: "Sobre Mí",
   },
 
   {
     href: "#contactUs",
-    title: "Contacts",
+    title: "Contactos",
   },
   {
-    href: "#",
-    title: "Get Start",
+    href: buildWhatsAppLink(),
+    title: "Escríbeme",
     className: "btn btn-primary",
+    isWhatsApp: true,
   },
 ];

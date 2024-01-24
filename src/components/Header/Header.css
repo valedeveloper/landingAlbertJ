@@ -27,7 +27,10 @@
   font-weight: var(--fw-700);
   line-height: 1;
 }
-
+.logo img {
+  max-width: 100%; /* La imagen no superará el ancho del contenedor */
+  height: 100px ; /* La altura se ajustará automáticamente para mantener la proporción */
+}
 .nav-toggle-btn{
   font-size: 40px;
 }

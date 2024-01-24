@@ -12,9 +12,22 @@
 
 :root {
   --safety-orange: hsl(25, 100%, 50%);
+  --safety-blue: #405a8f;
+  
+
+
   --lavender-gray: hsl(230, 19%, 81%);
+
+
+
+
   --persian-rose: hsl(328, 100%, 59%);
-  --red-crayola: hsl(341, 100%, 49%);
+  --persian-blueDark: #172c5d;
+
+
+
+
+  --red-crayola: #FFA500;
   --eerie-black: hsl(240, 6%, 10%);
   --light-gray: hsl(0, 0%, 80%);
   --cultured-2: hsl(210, 60%, 98%);
@@ -29,15 +42,15 @@
   /*Gradint color*/
   --gradient: linear-gradient(
     to left top,
-    var(--persian-rose),
-    var(--safety-orange)
+    var(--persian-blueDark),
+    var(--safety-blue)
   );
 
   /*Typographic*/
 
   --ff-roboto: "Roboto", sans-serif;
   --ff-league-spartan: "League Spartan", sans-serif;
-  --fs-1: 3.5rem;
+  --fs-1: 3.0rem;
   --fs-2: 3rem;
   --fs-3: 2.1rem;
   --fs-4: 1.7rem;
@@ -246,21 +259,6 @@ body {
   object-fit: cover;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
@@ -361,7 +359,7 @@ body {
     display: none;
   }
 
-  .navbar{
+  .navbar {
     visibility: visible;
   }
 
@@ -537,6 +535,7 @@ body {
   .navbar-list {
     all: unset;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 30px;
   }
@@ -594,7 +593,7 @@ body {
     left: 0;
     width: 2px;
     height: 100%;
-    background-color: var(--red-crayola);
+    background-color: var(--safety-blue);
   }
 
   .hero-text,

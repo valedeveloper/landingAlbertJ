@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ItemLink from "../ItemLink/ItemLink.tsx";
 import Button from "../Button/Button.tsx";
 import { listMenu } from "./listMenu";
@@ -9,23 +9,16 @@ function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Verificar el tamaño de la pantalla y actualizar el estado según sea necesario
-     ; // Por ejemplo, activa el menú si el ancho de la pantalla es mayor que 768px
+      setIsMenuActive(window.innerWidth > 1000);
     };
 
-    // Agregar el event listener al cargar el componente
-    window.addEventListener("resize", ()=> setIsMenuActive(window.innerWidth > 768));
+    window.addEventListener("resize", handleResize);
 
-    // Llamar al manejador de cambio de tamaño al cargar el componente
     handleResize();
-
-    // Eliminar el event listener al desmontar el componente
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-
 
   const onToggleMenu = () => {
     setIsMenuActive((prevState) => !prevState);
@@ -35,22 +28,24 @@ function Header() {
     <header className="header">
       <div className="container">
         <a href="#" className="logo">
-          Albert Jota
+          <img src="/assets/images/LogoBlancoAlbertJ-sinfondo.png"  alt="Logo Albert J"/>
         </a>
 
-        <nav  className={"navbar container " + (isMenuActive && "active")}>
+        <nav className={"navbar container " + (isMenuActive && "active")}>
           <ul className="navbar-list">
             {listMenu.map((item) => (
               <ItemLink
                 key={item.title}
                 href={item.href}
                 title={item.title}
+                isWhatsApp={item.isWhatsApp}
                 className={item.className}
               />
             ))}
           </ul>
+          
         </nav>
-        <Button onToggleMenu={onToggleMenu} />
+        <Button onToggleMenu={onToggleMenu} isMenuActive={isMenuActive} />
       </div>
     </header>
   );

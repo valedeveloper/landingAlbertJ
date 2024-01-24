@@ -1,7 +1,8 @@
 import { IonIcon } from "@ionic/react";
 import {
-  chatbox,
-  desktop,
+  videocamOutline,
+  megaphoneOutline,
+  micOutline,
   bulb,
   phonePortraitOutline,
   archive,
@@ -10,39 +11,21 @@ import {
 
 export const listService = [
   {
-    color: "#13c4a1",
-    icon: <IonIcon icon={chatbox} />,
-    title: "SEO Optimization",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae",
+    color: " #D94F26",
+    icon: <IonIcon icon={videocamOutline} />,
+    title: "Publicidad Impactante",
+    desc: "Sumérgete en campañas visuales que no solo capturan la atención, sino que dejan una impresión duradera en la mente de tu audiencia. Desde medios digitales hasta la vía pública, creamos experiencias visuales que resaltan.",
   },
   {
-    color: " #6610F2",
-    icon: <IonIcon icon={desktop} />,
-    title: "SEO Optimization",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae",
+    color: " #1D7435",
+    icon: <IonIcon icon={megaphoneOutline} />,
+    title: "Perifoneo y Volanteo Efectivo",
+    desc: "Llevamos tu mensaje más allá de las pantallas, directamente a donde está tu audiencia. Con estrategias de perifoneo y volanteo precisas, aseguramos que tu marca esté presente en cada rincón relevante.",
   },
   {
     color: " #ffb700",
-    icon: <IonIcon icon={bulb} />,
-    title: "SEO Optimization",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae",
-  },
-  {
-    color: " #fc3549",
-    icon: <IonIcon icon={phonePortraitOutline} />,
-    title: "SEO Optimization",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae",
-  },
-  {
-    color: " #00d288",
-    icon: <IonIcon icon={archive} />,
-    title: "SEO Optimization",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae",
-  },
-  {
-    color: " #13c4a1",
-    icon: <IonIcon icon={build} />,
-    title: "SEO Optimization",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae",
+    icon: <IonIcon icon={micOutline} />,
+    title: "Grabación de Piezas Publicitarias de Alta Calidad",
+    desc: "Confía en nuestro equipo de expertos creativos y técnicos para dar vida a tu mensaje a través de piezas auditivas excepcionales. Desde comerciales hasta mensajes corporativos, garantizamos calidad que se escucha.",
   },
 ];

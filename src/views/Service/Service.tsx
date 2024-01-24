@@ -7,14 +7,10 @@ function Service() {
     return (
         <section className="section service" id="services" aria-label="service">
             <div className="container">
-                <h2 className="h2 section-title">Services We Provided</h2>
+                <h2 className="h2 section-title">Nuestros Servicios</h2>
                 <p className="section-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                    Potenciando tu Mensaje, Maximizando tu Impacto
                 </p>
-
-
-
-
                 <ul className="grid-list">
 
                     {

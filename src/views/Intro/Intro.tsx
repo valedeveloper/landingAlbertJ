@@ -1,30 +1,32 @@
-import React from 'react'
-import ItemLink from '../../components/ItemLink/ItemLink.tsx';
-import "./Intro.css"
+import React from "react";
+import ItemLink from "../../components/ItemLink/ItemLink.tsx";
+import "./Intro.css";
+import { buildWhatsAppLink } from "../../utilities/getLinkWhatsApp.js";
 
 function Intro() {
   return (
     <section className="section hero" id="home" aria-label="hero">
       <div className="container">
         <div className="hero-content">
-          <p className="hero-subtitle">InnoHub Marketing Agency</p>
-          <h1 className="h1 hero-title">We are available for marketing</h1>
+          <p className="hero-subtitle">Albert Jota Publicidad</p>
+          <h1 className="h1 hero-title">Tu Éxito Publicitario Comienza Aquí</h1>
           <p className="hero-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod temporthem incididunt ut labore et dolore magna aliqua.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod temporthem incididunt ut labore et dolore magna aliqua.
-
+            Transformamos tus ideas en impacto. Desde publicidad visualmente
+            cautivadora hasta estrategias de perifoneo que resuenan, nos
+            dedicamos a elevar tu mensaje por encima del ruido. Descubre cómo
+            nuestras soluciones integrales y nuestra dedicación inquebrantable
+            pueden impulsar tu marca hacia nuevas alturas.
           </p>
           <ItemLink
-            href="#"
-            title="Get Start"
+            href={buildWhatsAppLink()}
+            isWhatsApp
+            title="Comienza Ya"
             className="btn btn-primary btn-hero"
           />
         </div>
         <figure className="hero-baner">
           <img
-            src="/assets/images/hero-banner.png"
+            src="/assets/images/intro-banner.jpg"
             width="720"
             height="673"
             alt=" hero banner"
@@ -33,7 +35,7 @@ function Intro() {
         </figure>
       </div>
     </section>
-  )
+  );
 }
 
-export default Intro
+export default Intro;
