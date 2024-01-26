@@ -1,13 +1,10 @@
 import React from "react";
+import { CardServiceProps } from "@/app";
 import "./CardService.css";
 
-type Props = {
-  color: string;
-  icon: React.JSX.Element;
-  title: string;
-  desc: string;
-};
-function CardService({ color, icon, title, desc }: Props) {
+
+
+function CardService({ color, icon, title, desc }: CardServiceProps):JSX.Element {
   return (
     <li className="service-card" >
       <div className="card-icon" style={{ backgroundColor: `${color}` }}>{icon}</div>

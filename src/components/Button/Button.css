@@ -3,3 +3,14 @@
     color: var( --persian-blueDark);
   }
 
+
+  
+  .nav-toggle-btn.active .open,
+  .nav-toggle-btn .close{
+    display: none;
+  } 
+  
+  .nav-toggle-btn .open,
+  .nav-toggle-btn.active .close{
+    display: block;
+  }

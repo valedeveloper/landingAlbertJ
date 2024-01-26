@@ -26,7 +26,7 @@
 }
 
 .about:is(.section-title, .section-text){
-  text-align:start;
+  text-align: left;
 }
 
 .about .section-title{
@@ -58,5 +58,3 @@
 {
   margin-block-end: 12px;
 }
-
-

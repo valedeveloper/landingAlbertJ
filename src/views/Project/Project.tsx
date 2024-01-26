@@ -1,36 +1,9 @@
 import React from 'react';
-import Slider from 'react-slick';
+import CardProject from '../../components/CardProject/CardProject.tsx';
 import { listproject } from './listProjects';
 import "./Project.css";
-import CardProject from '../../components/CardProject/CardProject.tsx';
 
-function Project() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
-
+function Project():JSX.Element {
     return (
         <section className="section project" id="projectUs" aria-label="project">
             <div className="container">
@@ -39,17 +12,15 @@ function Project() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
                 </p>
             </div>
-            <Slider {...settings}>
-                {listproject.map(project => (
-                    <CardProject
-                        key={project.id}
-                        id={project.id}
-                        title={project.title}
-                        subtitle={project.subtitle}
-                        // Agrega otras propiedades necesarias para tu componente CardProject
-                    />
-                ))}
-            </Slider>
+            {listproject.map(project => (
+                <CardProject
+                    key={project.id}
+                    id={project.id}
+                    title={project.title}
+                    subtitle={project.subtitle}
+                // Agrega otras propiedades necesarias para tu componente CardProject
+                />
+            ))}
         </section>
     );
 }

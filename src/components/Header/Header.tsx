@@ -1,39 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ItemLink from "../ItemLink/ItemLink.tsx";
 import Button from "../Button/Button.tsx";
+import { useMenu } from '../../hooks/useMenu.ts';
 import { listMenu } from "./listMenu";
 import { buildWhatsAppLink } from "../../utilities/getLinkWhatsApp.js";
 import "./Header.css";
-function Header() {
-  const [isMenuActive, setIsMenuActive] = useState(false);
-
-  // window.onscroll = () => {
-  //   setIsScroll(window.pageYOffset > 0);
-  // };
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMenuActive(window.innerWidth > 1000);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const onToggleMenu = () => {
-    setIsMenuActive((prevState) => !prevState);
-  };
-
+function Header(): JSX.Element {
+  const { isMenuActive, onToggleMenu } = useMenu()
   return (
-    <header className={"header "}>
+    <header className="header">
       <div className="container">
         <a href="#" className="logo">
           <img
-            src={"/assets/images/LogoBlancoAlbertJ-sinfondo.png"}
+            src="/assets/images/LogoBlancoAlbertJ-sinfondo.png"
             alt="Logo Albert J"
           />
         </a>
@@ -52,7 +31,7 @@ function Header() {
             <li>
               <a
                 href={buildWhatsAppLink()}
-                className={"btn btn-primary "}
+                className="btn btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -69,5 +48,4 @@ function Header() {
     </header>
   );
 }
-
 export default Header;

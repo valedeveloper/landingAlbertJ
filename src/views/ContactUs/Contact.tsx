@@ -1,7 +1,7 @@
 import React from "react";
 import { IonIcon } from "@ionic/react";
 import { mailOutline, mapOutline, headsetOutline } from "ionicons/icons";
-import "./ContactUs.css";
+import "./Contact.css";
 function Contact() {
   return (
     <section className="section contact" id="contactUs" aria-label="contact">

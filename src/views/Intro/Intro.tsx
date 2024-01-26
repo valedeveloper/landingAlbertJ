@@ -1,9 +1,8 @@
 import React from "react";
 import ItemLink from "../../components/ItemLink/ItemLink.tsx";
-import "./Intro.css";
 import { buildWhatsAppLink } from "../../utilities/getLinkWhatsApp.js";
-
-function Intro() {
+import "./Intro.css";
+function Intro():JSX.Element{
   return (
     <section className="section hero" id="home" aria-label="hero">
       <div className="container">
