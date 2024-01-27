@@ -11,12 +11,12 @@ function Header(): JSX.Element {
   return (
     <header className="header">
       <div className="container">
-        <a onClick={()=>scrollToSection("home")} className="logo">
+        <button onClick={()=>scrollToSection("home")}    className="logo">
           <img
             src="/assets/images/LogoBlancoAlbertJ-sinfondo.png"
             alt="Logo Albert J"
           />
-        </a>
+        </button>
         <nav className={"navbar container " + (isMenuActive && "active ")}>
           <ul className="navbar-list">
             {listMenu.map((item) => (
