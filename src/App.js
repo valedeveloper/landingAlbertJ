@@ -8,7 +8,9 @@ import Contact from "./views/ContactUs/Contact.tsx";
 import Footer from "./components/Footer/Footer.tsx";
 import TopButton from "./components/TopButton/TopButton.tsx";
 import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton.tsx";
+import { useScroll } from "./hooks/useScroll.ts";
 function App() {
+  const { isScroll } = useScroll();
   return (
     <>
       <Header />
@@ -22,8 +24,7 @@ function App() {
         </article>
       </main>
       <Footer />
-      {/* <TopButton /> */}
-      <WhatsAppButton />
+      {isScroll ? <TopButton /> : <WhatsAppButton />}
     </>
   );
 }

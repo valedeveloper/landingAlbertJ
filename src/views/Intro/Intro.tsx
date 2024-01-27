@@ -1,8 +1,7 @@
 import React from "react";
-import ItemLink from "../../components/ItemLink/ItemLink.tsx";
 import { buildWhatsAppLink } from "../../utilities/getLinkWhatsApp.js";
 import "./Intro.css";
-function Intro():JSX.Element{
+function Intro(): JSX.Element {
   return (
     <section className="section hero" id="home" aria-label="hero">
       <div className="container">
@@ -16,12 +15,17 @@ function Intro():JSX.Element{
             nuestras soluciones integrales y nuestra dedicación inquebrantable
             pueden impulsar tu marca hacia nuevas alturas.
           </p>
-          <ItemLink
-            href={buildWhatsAppLink()}
-            isWhatsApp
-            title="Comienza Ya"
-            className="btn btn-primary btn-hero"
-          />
+
+          <li>
+            <a
+              href={buildWhatsAppLink()}
+              className="btn btn-primary btn-hero"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Comienza Ya
+            </a>
+          </li>
         </div>
         <figure className="hero-baner">
           <img
