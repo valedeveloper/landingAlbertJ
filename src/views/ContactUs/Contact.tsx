@@ -13,7 +13,7 @@ function Contact() {
           con Albert Jota Publicidad y descubre cómo podemos trabajar juntos
           para alcanzar tus metas.
         </p>
-        {/* <form className="contact-form">
+       <form className="contact-form">
           <div className="input-wraper">
             <input
               type="text"
@@ -77,7 +77,7 @@ function Contact() {
           <button type="submit" className="btn btn-primary">
             Send Message
           </button>
-        </form> */}
+        </form>
         <ul className="contact-list">
           <li className="contact-item">
             <div className="contact-card">
@@ -86,12 +86,10 @@ function Contact() {
               </div>
               <div className="card-content">
                 <h3 className="h3 card-title">Correo Electrónico</h3>
-                <a href="#" className="card-link">
-                  albertjpublicidad@yahoo.es
+                <a href={`mailto:albertjpublicidad@gmail.com`} className="card-link">
+                  albertjpublicidad@gmail.es
                 </a>
-                <a href="#" className="card-link">
-                  albertjpublicidad@gmail.com
-                </a>
+               
               </div>
             </div>
           </li>
@@ -105,6 +103,8 @@ function Contact() {
                 <a href="#" className="card-link">
                   Palmira, Valle del Cauca, Colombia
                 </a>
+
+               
               </div>
             </div>
           </li>

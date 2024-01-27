@@ -5,9 +5,9 @@ import { handleBackToTop } from '../../utilities/scrollToSection';
 import './TopButton.css'
 const TopButton = () => {
     return (
-        <a href="#top" aria-label="back to top" onClick={handleBackToTop} className="back-top-btn active">
+        <button aria-label="back to top" onClick={handleBackToTop} className="back-top-btn active">
             <IonIcon icon={arrowUp} aria-hidden="true" />
-        </a>
+        </button>
     );
 };
 
