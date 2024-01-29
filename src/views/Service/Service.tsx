@@ -3,7 +3,7 @@ import CardService from '../../components/CardService/CardService.tsx'
 import { listService } from './listService.js'
 function Service():JSX.Element {
     return (
-        <section className="section service" id="services" aria-label="service">
+        <section className="section service" id="services" aria-label="service" data-testid="service">
             <div className="container">
                 <h2 className="h2 section-title">Nuestros Servicios</h2>
                 <p className="section-text">

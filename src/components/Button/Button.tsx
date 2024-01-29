@@ -11,6 +11,7 @@ function Button({ onToggleMenu, isMenuActive }: ButtonProps): JSX.Element {
       aria-label={"Toggle menu"}
       onClick={onToggleMenu}
       data-nav-toggler
+   
     >
       {isMenuActive ? (
         <IonIcon icon={closeOutline}></IonIcon>

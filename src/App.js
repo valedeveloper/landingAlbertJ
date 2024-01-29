@@ -1,7 +1,6 @@
 import Header from "./components/Header/Header.tsx";
 import Intro from "./views/Intro/Intro.tsx";
 import Service from "./views/Service/Service.tsx";
-import Project from "./views/Project/Project.tsx";
 import CallAcion from "./views/CallAction/CallAction.tsx";
 import About from "./views/About/About.tsx";
 import Contact from "./views/ContactUs/Contact.tsx";

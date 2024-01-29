@@ -5,7 +5,7 @@ import { handleBackToTop } from '../../utilities/scrollToSection';
 import './TopButton.css'
 const TopButton = () => {
     return (
-        <button aria-label="back to top" onClick={handleBackToTop} className="back-top-btn active">
+        <button aria-label="back to top" onClick={handleBackToTop} className="back-top-btn active" data-testid="topButton">
             <IonIcon icon={arrowUp} aria-hidden="true" />
         </button>
     );

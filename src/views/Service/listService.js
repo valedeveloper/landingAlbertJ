@@ -1,13 +1,10 @@
 import { IonIcon } from "@ionic/react";
-import {
-  videocamOutline,
-  megaphoneOutline,
-  micOutline,
-  bulb,
-  phonePortraitOutline,
-  archive,
-  build,
-} from "ionicons/icons";
+import { videocamOutline, megaphoneOutline, micOutline } from "ionicons/icons";
+
+// bulb,
+//   phonePortraitOutline,
+//   archive,
+//   build,
 
 export const listService = [
   {

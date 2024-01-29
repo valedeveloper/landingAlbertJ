@@ -1,9 +1,9 @@
 import React from "react";
-import { buildWhatsAppLink } from "../../utilities/getLinkWhatsApp.js";
+import { buildWhatsAppLink } from "../../utilities/buildWhatsAppLink.js";
 import "./Intro.css";
 function Intro(): JSX.Element {
   return (
-    <section className="section hero" id="home" aria-label="hero">
+    <section className="section hero" id="home" aria-label="hero"  data-testid="intro">
       <div className="container">
         <div className="hero-content">
           <p className="hero-subtitle">Albert Jota Publicidad</p>
@@ -17,14 +17,13 @@ function Intro(): JSX.Element {
           </p>
 
           <li>
-            <a
-              href={buildWhatsAppLink()}
-              className="btn btn-primary btn-hero"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              className="btn btn-primary"
+              onClick={buildWhatsAppLink}
             >
               Comienza Ya
-            </a>
+            </button>
+
           </li>
         </div>
         <figure className="hero-baner">

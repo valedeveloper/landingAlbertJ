@@ -1,17 +1,17 @@
 import React from "react";
 import ItemLink from "../ItemLink/ItemLink.tsx";
 import Button from "../Button/Button.tsx";
-import { listMenu } from "./listMenu";
-import {scrollToSection} from '../../utilities/scrollToSection.js';
-import { buildWhatsAppLink } from "../../utilities/getLinkWhatsApp.js";
+import { itemsMenu } from "./itemsMenu.js";
+import { scrollToSection } from '../../utilities/scrollToSection.js';
+import { buildWhatsAppLink } from "../../utilities/buildWhatsAppLink.js";
 import { useMenu } from '../../hooks/useMenu.ts';
 import "./Header.css";
 function Header(): JSX.Element {
   const { isMenuActive, onToggleMenu } = useMenu()
   return (
-    <header className="header">
+    <header className="header" data-testid="header">
       <div className="container">
-        <button onClick={()=>scrollToSection("home")}    className="logo">
+        <button onClick={() => scrollToSection("home")} className="logo">
           <img
             src="/assets/images/LogoBlancoAlbertJ-sinfondo.png"
             alt="Logo Albert J"
@@ -19,24 +19,22 @@ function Header(): JSX.Element {
         </button>
         <nav className={"navbar container " + (isMenuActive && "active ")}>
           <ul className="navbar-list">
-            {listMenu.map((item) => (
+            {itemsMenu.map((item) => (
               <ItemLink
                 key={item.title}
-                href={item.href}
+                sectionId={item.sectionId}
                 title={item.title}
                 scrollToSection={scrollToSection}
-               
+
               />
             ))}
             <li>
-              <a
-                href={buildWhatsAppLink()}
+              <button
                 className="btn btn-primary"
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={buildWhatsAppLink}
               >
                 Escríbenos
-              </a>
+              </button>
             </li>
           </ul>
         </nav>

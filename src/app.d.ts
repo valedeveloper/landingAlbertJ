@@ -18,10 +18,8 @@ type CardServiceProps = {
 };
 
 type ItemProps= {
-  href: string;
+  sectionId: string;
   title: string;
   className?: string;
-  isWhatsApp?: boolean;
-  isScroll?: boolean;
   scrollToSection: (ref: string) => void;
 }

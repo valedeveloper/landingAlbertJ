@@ -4,7 +4,7 @@ import { mailOutline, mapOutline, headsetOutline } from "ionicons/icons";
 import "./Contact.css";
 function Contact() {
   return (
-    <section className="section contact" id="contactUs" aria-label="contact">
+    <section className="section contact" id="contact" aria-label="contact"  data-testid="contact">
       <div className="container">
         <h2 className="h2 section-title">Contactos</h2>
         <p className="section-text">
@@ -13,7 +13,7 @@ function Contact() {
           con Albert Jota Publicidad y descubre cómo podemos trabajar juntos
           para alcanzar tus metas.
         </p>
-       <form className="contact-form">
+       {/* <form className="contact-form">
           <div className="input-wraper">
             <input
               type="text"
@@ -77,7 +77,7 @@ function Contact() {
           <button type="submit" className="btn btn-primary">
             Send Message
           </button>
-        </form>
+        </form> */}
         <ul className="contact-list">
           <li className="contact-item">
             <div className="contact-card">
@@ -100,11 +100,7 @@ function Contact() {
               </div>
               <div className="card-content">
                 <h3 className="h3 card-title">Ubicación</h3>
-                <a href="#" className="card-link">
-                  Palmira, Valle del Cauca, Colombia
-                </a>
-
-               
+               <span>Palmira, Valle del Cauca</span>
               </div>
             </div>
           </li>
@@ -115,12 +111,7 @@ function Contact() {
               </div>
               <div className="card-content">
                 <h3 className="h3 card-title">Llama o Escribe</h3>
-                <a href="#" className="card-link">
-                  +57 318 833 1399
-                </a>
-                <a href="#" className="card-link">
-                  +57 315 475 5012
-                </a>
+                <span>+57 318 833 1399</span>
               </div>
             </div>
           </li>

@@ -3,14 +3,16 @@ import { ItemProps } from "@/app";
 import "./ItemLink.css";
 
 
-function ItemMenu({ href, title, className, isWhatsApp = false, scrollToSection }: ItemProps): JSX.Element {
-  const linkProps = isWhatsApp ? { target: "_blank", rel: "noopener noreferrer" } : {}
+function ItemMenu({ sectionId, title, className, scrollToSection }: ItemProps): JSX.Element {
   return (
-    <li> <a
-      onClick={() => scrollToSection(href)}
-      className={className ?? "navbar-link "}
-      {...linkProps}
-    >{title}</a></li>
+    <li>
+      <button onClick={() => scrollToSection(sectionId)}
+        className={className ?? "navbar-link "}
+        data-testid="item-menu-button"
+        >
+        {title}
+      </button> 
+    </li>
   );
 }
 
